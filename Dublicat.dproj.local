@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.183,=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.298,=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.420,=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.739,=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.217,D:\Documents\RAD Rio Studio\Dublikat\Unit1.dfm=D:\Documents\RAD Rio Studio\Dublikat\WinEdit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.420,=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.298,=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.981,=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.217,D:\Documents\RAD Rio Studio\Dublikat\WinEdit.dfm=D:\Documents\RAD Rio Studio\Dublikat\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.147,D:\Documents\RAD Rio Studio\Unit2.pas=D:\Documents\RAD Rio Studio\Dublikat\Fm_Dublicat.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.445,=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.541,=D:\Documents\RAD Rio Studio\Dublikat\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.147,D:\Documents\RAD Rio Studio\Dublikat\Fm_Dublicat.pas=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.147,D:\Documents\RAD Rio Studio\Dublikat\Fm_Dublicat.dfm=D:\Documents\RAD Rio Studio\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.183,=D:\Documents\RAD Rio Studio\Unit2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.223,=D:\Documents\RAD Rio Studio\Dublikat\DiskTools.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.619,D:\Documents\RAD Rio Studio\Dublikat\Dublicat.dproj=D:\Documents\RAD Rio Studio\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.684,=D:\Documents\RAD Rio Studio\Dublikat\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.217,D:\Documents\RAD Rio Studio\Dublikat\WinEdit.pas=D:\Documents\RAD Rio Studio\Dublikat\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.619,D:\Documents\RAD Rio Studio\Project1.dproj=D:\Documents\RAD Rio Studio\Dublikat\Dublicat.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.541,=D:\Documents\RAD Rio Studio\Dublikat\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.147,D:\Documents\RAD Rio Studio\Unit2.dfm=D:\Documents\RAD Rio Studio\Dublikat\Fm_Dublicat.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.416,=D:\Documents\RAD Rio Studio\Dublikat\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.217,D:\Documents\RAD Rio Studio\Dublikat\Unit1.pas=D:\Documents\RAD Rio Studio\Dublikat\WinEdit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.684,=D:\Documents\RAD Rio Studio\Dublikat\Unit1.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile Android="123" Android64="123"/>

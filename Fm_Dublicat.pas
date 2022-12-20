@@ -40,9 +40,9 @@ type
  end;
 
   TFmDublicat = class(TForm)
-    Panel1: TPanel;
+    Panel_ListPath: TPanel;
     ListBoxListPath: TListBox;
-    RzPanel1: TRzPanel;
+    RzPanelConfig: TRzPanel;
     RzGroupBox1: TRzGroupBox;
     CheckBoxName: TCheckBox;
     CheckBoxData: TCheckBox;

@@ -18,7 +18,7 @@ object FmDublicat: TFmDublicat
   OnCreate = FormCreate
   PixelsPerInch = 103
   TextHeight = 13
-  object Panel1: TPanel
+  object Panel_ListPath: TPanel
     AlignWithMargins = True
     Left = 3
     Top = 3
@@ -98,7 +98,7 @@ object FmDublicat: TFmDublicat
       OnClick = ButtonCloseClick
     end
   end
-  object RzPanel1: TRzPanel
+  object RzPanelConfig: TRzPanel
     AlignWithMargins = True
     Left = 5
     Top = 175
@@ -117,7 +117,7 @@ object FmDublicat: TFmDublicat
     TabOrder = 1
     object RzGroupBox1: TRzGroupBox
       Left = 15
-      Top = 2
+      Top = 7
       Width = 506
       Height = 103
       Caption = #1087#1072#1088#1072#1084#1077#1090#1088#1099' '#1076#1083#1103' '#1087#1086#1080#1089#1082#1072' '#1080' '#1089#1088#1072#1074#1085#1077#1085#1080#1103
@@ -131,22 +131,22 @@ object FmDublicat: TFmDublicat
       TabOrder = 0
       Transparent = True
       object RzBorder1: TRzBorder
-        Left = 288
+        Left = 270
         Top = 13
-        Width = 209
+        Width = 227
         Height = 83
         BorderOuter = fsFlat
       end
       object RzLabel6: TRzLabel
-        Left = 304
-        Top = 24
-        Width = 188
-        Height = 48
+        Left = 282
+        Top = 26
+        Width = 211
+        Height = 32
         Caption = #1054#1075#1088#1072#1085#1080#1095#1077#1085#1080#1077' '#1088#1072#1079#1084#1077#1088#1072' '#1092#1072#1081#1083#1072' '#1087#1088#1080' '#1089#1088#1072#1074#1085#1077#1085#1080#1080' '#1087#1086' '#1089#1086#1076#1077#1088#1078#1072#1085#1080#1102
         WordWrap = True
       end
       object RzLabel7: TRzLabel
-        Left = 304
+        Left = 288
         Top = 71
         Width = 14
         Height = 16
@@ -185,7 +185,7 @@ object FmDublicat: TFmDublicat
       object CheckBoxCRC: TCheckBox
         Left = 119
         Top = 71
-        Width = 172
+        Width = 145
         Height = 17
         Caption = #1087#1086' '#1089#1086#1076#1077#1088#1078#1072#1085#1080#1102
         Font.Charset = DEFAULT_CHARSET
@@ -211,7 +211,7 @@ object FmDublicat: TFmDublicat
         TabOrder = 3
       end
       object RzEditSizeLimit: TRzEdit
-        Left = 324
+        Left = 317
         Top = 66
         Width = 161
         Height = 24
@@ -222,8 +222,9 @@ object FmDublicat: TFmDublicat
     end
     object RzGroupBoxModeCompare: TRzGroupBox
       Left = 527
-      Top = 0
+      Top = 7
       Width = 338
+      Height = 103
       Caption = #1076#1077#1081#1089#1090#1074#1080#1103' '#1089' '#1085#1072#1081#1076#1077#1085#1085#1099#1084#1080' '#1092#1072#1081#1083#1072#1084#1080
       Color = 15987699
       Font.Charset = DEFAULT_CHARSET
@@ -294,8 +295,8 @@ object FmDublicat: TFmDublicat
         TabStop = True
       end
       object ActivityIndicator1: TActivityIndicator
-        Left = 289
-        Top = 65
+        Left = 290
+        Top = 61
       end
     end
     object RzGroupBox3: TRzGroupBox
@@ -760,8 +761,8 @@ object FmDublicat: TFmDublicat
     end
   end
   object PopupMenu1: TPopupMenu
-    Left = 635
-    Top = 75
+    Left = 595
+    Top = 43
     object N1: TMenuItem
       Caption = #1086#1095#1080#1089#1090#1080#1090#1100' '#1089#1087#1080#1089#1086#1082
       OnClick = N1Click
@@ -770,8 +771,8 @@ object FmDublicat: TFmDublicat
   object PopupMenuEcho: TPopupMenu
     AutoHotkeys = maManual
     OnPopup = PopupMenuEchoPopup
-    Left = 427
-    Top = 81
+    Left = 411
+    Top = 41
     object PopUndo: TMenuItem
       Caption = #1054#1090#1084#1077#1085#1080#1090#1100
       ImageIndex = 51
@@ -822,11 +823,11 @@ object FmDublicat: TFmDublicat
     Enabled = False
     Interval = 2800
     OnTimer = Timer1Timer
-    Left = 525
-    Top = 75
+    Left = 477
+    Top = 43
   end
   object RzVersionInfo1: TRzVersionInfo
-    Left = 571
+    Left = 539
     Top = 43
   end
 end

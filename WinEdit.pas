@@ -6,15 +6,15 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls, RzPanel,
   Vcl.StdCtrls, Vcl.ComCtrls, RzEdit, System.ImageList, Vcl.ImgList,
-  Vcl.ShellAnimations;
+  Vcl.ShellAnimations, System.Actions, Vcl.ActnList;
 
 type
   TFmWinEdit = class(TForm)
     MainMenu1: TMainMenu;
     N1: TMenuItem;
-    N2: TMenuItem;
+    mnSaveAs: TMenuItem;
     N3: TMenuItem;
-    N4: TMenuItem;
+    mnClose: TMenuItem;
     RzPanel1: TRzPanel;
     RzRichEditEchoWin: TRzRichEdit;
     SaveDialog1: TSaveDialog;
@@ -35,8 +35,13 @@ type
     popFoundFile: TMenuItem;
     N9: TMenuItem;
     ShellResources1: TShellResources;
-    procedure N4Click(Sender: TObject);
-    procedure N2Click(Sender: TObject);
+    mnOpen: TMenuItem;
+    OpenDialog1: TOpenDialog;
+    ActionList1: TActionList;
+    ActionOpen: TAction;
+    ActionSaveAs: TAction;
+    ActionClose: TAction;
+    StatusBar1: TStatusBar;
     procedure PopupMenuEchoPopup(Sender: TObject);
     procedure PopUndoClick(Sender: TObject);
     procedure PopCopyClick(Sender: TObject);
@@ -48,6 +53,9 @@ type
     procedure N7Click(Sender: TObject);
     procedure popOpenFileClick(Sender: TObject);
     procedure popFoundFileClick(Sender: TObject);
+    procedure ActionOpenExecute(Sender: TObject);
+    procedure ActionCloseExecute(Sender: TObject);
+    procedure ActionSaveAsExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,18 +70,6 @@ implementation
 {$R *.dfm}
 
 uses vcl.Clipbrd,ShellApi;
-
-procedure TFmWinEdit.N4Click(Sender: TObject);
-begin
- close
-end;
-
-procedure TFmWinEdit.N2Click(Sender: TObject);
-begin
- if SaveDialog1.Execute then RzRichEditEchoWin.Lines.SaveToFile(SaveDialog1.FileName);
-end;
-
-
 
 procedure TFmWinEdit.PopupMenuEchoPopup(Sender: TObject);
 var re : TRzRichEdit;
@@ -150,6 +146,22 @@ begin
  namepath:=copy(st,pos('Папка:',st)+7,Length(st));
  if DirectoryExists(namepath) then
    ShellExecute(Handle, 'open',PChar(namepath), nil, nil,SW_SHOWNORMAL);
+end;
+
+
+procedure TFmWinEdit.ActionOpenExecute(Sender: TObject);
+begin
+ if OpenDialog1.Execute then RzRichEditEchoWin.Lines.LoadFromFile(OpenDialog1.FileName);
+end;
+
+procedure TFmWinEdit.ActionCloseExecute(Sender: TObject);
+begin
+ FmWinEdit.close;
+end;
+
+procedure TFmWinEdit.ActionSaveAsExecute(Sender: TObject);
+begin
+ if SaveDialog1.Execute then RzRichEditEchoWin.Lines.SaveToFile(SaveDialog1.FileName);
 end;
 
 end.

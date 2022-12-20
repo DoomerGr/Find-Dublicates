@@ -13,7 +13,7 @@ object FmWinEdit: TFmWinEdit
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poScreenCenter
   PixelsPerInch = 103
   TextHeight = 13
   object RzPanel1: TRzPanel
@@ -29,7 +29,7 @@ object FmWinEdit: TFmWinEdit
       Left = 0
       Top = 0
       Width = 1384
-      Height = 752
+      Height = 733
       Align = alClient
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWindowText
@@ -43,22 +43,34 @@ object FmWinEdit: TFmWinEdit
       StyleElements = []
       Zoom = 100
     end
+    object StatusBar1: TStatusBar
+      Left = 0
+      Top = 733
+      Width = 1384
+      Height = 19
+      Panels = <
+        item
+          Text = 'Alt-X '#1042#1099#1093#1086#1076
+          Width = 50
+        end>
+    end
   end
   object MainMenu1: TMainMenu
     Left = 416
     Top = 112
     object N1: TMenuItem
       Caption = #1060#1072#1081#1083
-      object N2: TMenuItem
-        Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1082#1072#1082'...'
-        OnClick = N2Click
+      object mnOpen: TMenuItem
+        Action = ActionOpen
+      end
+      object mnSaveAs: TMenuItem
+        Action = ActionSaveAs
       end
       object N3: TMenuItem
         Caption = '-'
       end
-      object N4: TMenuItem
-        Caption = #1047#1072#1082#1088#1099#1090#1100
-        OnClick = N4Click
+      object mnClose: TMenuItem
+        Action = ActionClose
       end
     end
   end
@@ -117,7 +129,7 @@ object FmWinEdit: TFmWinEdit
       Caption = '-'
     end
     object popOpenFile: TMenuItem
-      Caption = #1054#1090#1082#1088#1099#1090#1100' '#1092#1072#1081#1083
+      Caption = #1054#1090#1082#1088#1099#1090#1100' '#1092#1072#1081#1083' '#1080#1079' '#1089#1090#1088#1086#1082#1080' '#1083#1086#1075' '#1092#1072#1081#1083#1072
       OnClick = popOpenFileClick
     end
     object popFoundFile: TMenuItem
@@ -139,5 +151,30 @@ object FmWinEdit: TFmWinEdit
   object ShellResources1: TShellResources
     Left = 464
     Top = 520
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = 'rtf'
+    Filter = 'RTF '#1092#1072#1081#1083'|*.rtf|'#1042#1089#1077' '#1092#1072#1081#1083#1099'|*.*'
+    Left = 112
+    Top = 24
+  end
+  object ActionList1: TActionList
+    Left = 664
+    Top = 48
+    object ActionOpen: TAction
+      Caption = #1054#1090#1082#1088#1099#1090#1100
+      ShortCut = 16463
+      OnExecute = ActionOpenExecute
+    end
+    object ActionSaveAs: TAction
+      Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1082#1072#1082'...'
+      ShortCut = 16467
+      OnExecute = ActionSaveAsExecute
+    end
+    object ActionClose: TAction
+      Caption = #1047#1072#1082#1088#1099#1090#1100
+      ShortCut = 32856
+      OnExecute = ActionCloseExecute
+    end
   end
 end
